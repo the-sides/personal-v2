@@ -1,7 +1,7 @@
 'use client'; // hate
 import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
 import { gsap } from "~/lib/gsap";
-import { NavItem } from "~/app/_components/NavItem";
+import { NavItem } from "~/app/v1/_components/NavItem";
 
 
 export default function Home() {
