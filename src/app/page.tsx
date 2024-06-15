@@ -1,5 +1,6 @@
 import { JetBrains_Mono } from 'next/font/google';
 import '~/css/animations.scss'
+import Bubbles from './_components/Bubbles';
 
 const mono = JetBrains_Mono({
   weight: ['400'],
@@ -41,13 +42,14 @@ export default function Home() {
         </defs>
       </svg>
 
-      <div className="flex py-[148px] pl-[110px] text-[#2C2C2C]">
-        <div className="">
+      <section className="flex gap-x-4 text-[#2C2C2C]">
+        <div className="w-[48%] py-[148px] pl-[110px] ">
           <h1 className="block opacity-0 animate-[fadeIn_1s_ease-in-out_600ms_forwards] text-8xl font-bold">Jacob Sides</h1>
           <h2 className='text-3xl mt-8  opacity-0 animate-[fadeIn_1s_ease-in-out_1000ms_forwards]'>Creator by ambition & thought</h2>
-          <h2 className={`text-2xl mt-4 pl-0.5 ${mono.className} opacity-0 animate-[fadeIn_1s_ease-in-out_2300ms_forwards]`}>Full-stack Web Developer <br/> by experience & skill</h2>
+          <h2 className={`text-2xl mt-4 pl-0.5 ${mono.className} opacity-0 animate-[fadeIn_1s_ease-in-out_2300ms_forwards]`}>Full-stack Web Developer <br /> by experience & skill</h2>
         </div>
-      </div>
+        <Bubbles/>
+      </section>
     </main>
   );
 }
