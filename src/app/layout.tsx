@@ -1,6 +1,6 @@
 import '~/css/global.scss'
 
-import { Playfair_Display } from 'next/font/google'
+import {  Playfair_Display } from 'next/font/google'
 
 const font = Playfair_Display({
   weight: ['400', '700'],

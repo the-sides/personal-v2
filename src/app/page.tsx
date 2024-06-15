@@ -1,4 +1,11 @@
+import { JetBrains_Mono } from 'next/font/google';
 import '~/css/animations.scss'
+
+const mono = JetBrains_Mono({
+  weight: ['400'],
+  subsets: ['latin']
+})
+
 
 export default function Home() {
 
@@ -9,7 +16,7 @@ export default function Home() {
       <div className="grow-down animation-delay-1 absolute right-16 h-full bg-[#2C2C2C] w-px"></div>
       <div className="grow-right absolute top-16 h-px w-full bg-[#2C2C2C]"></div>
 
-      {/* Nav */}
+      {/* Nav Social Icons*/}
       <svg className='absolute left-[1.125rem] top-[5.25rem]' width="30" height="150" viewBox="0 0 30 150" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g className='opacity-0 animate-[fadeIn_1s_ease-in-out_200ms_forwards]' clipPath="url(#clip0_15_51)">
           <path d="M15.006 0.0823889C11.4634 0.0579103 8.02875 1.29068 5.32264 3.55798C2.61654 5.82528 0.817418 8.97757 0.250334 12.4453C-0.31675 15.9131 0.385598 19.4677 2.23049 22.4668C4.07537 25.4659 6.94113 27.7118 10.31 28.7987C11.0522 28.9192 11.2951 28.4241 11.2951 28.0628V25.6006C7.20634 26.457 6.34271 23.6469 6.34271 23.6469C5.60053 21.9207 4.61545 21.439 4.61545 21.439C3.37398 20.5692 4.75039 20.5692 4.75039 20.5692C6.23475 20.5692 7.08489 22.0412 7.08489 22.0412C8.32635 24.2491 10.5529 23.6469 11.4165 23.2722C11.4159 22.903 11.4922 22.5377 11.6409 22.1992C11.7895 21.8606 12.0072 21.5563 12.2802 21.3052C8.94709 20.9439 5.47908 19.7128 5.47908 13.9455C5.47908 12.4735 6.09981 11.1354 7.09838 10.1452C6.83376 9.5249 6.69741 8.85827 6.69741 8.18479C6.69741 7.51131 6.83376 6.84468 7.09838 6.22442C7.09838 6.22442 8.32635 5.84975 11.2951 7.69637C13.724 7.04069 16.2879 7.04069 18.7169 7.69637C21.5507 5.84975 22.7921 6.22442 22.7921 6.22442C23.0568 6.84468 23.1931 7.51131 23.1931 8.18479C23.1931 8.85827 23.0568 9.5249 22.7921 10.1452C23.9122 11.1354 24.4114 12.4735 24.4114 14.0793C24.4114 19.7128 20.9434 20.9439 17.6104 21.3052C18.2176 21.8003 18.7169 22.5363 18.7169 24.0082V28.0628C18.7169 28.4241 18.8518 28.9192 19.702 28.7987C23.0708 27.7118 25.9366 25.4659 27.7815 22.4668C29.6264 19.4677 30.3287 15.9131 29.7616 12.4453C29.1946 8.97757 27.3954 5.82528 24.6893 3.55798C21.9832 1.29068 18.5486 0.0579103 15.006 0.0823889Z" fill="#2C2C2C" />
@@ -34,6 +41,13 @@ export default function Home() {
         </defs>
       </svg>
 
+      <div className="flex py-[148px] pl-[110px] text-[#2C2C2C]">
+        <div className="">
+          <h1 className="block opacity-0 animate-[fadeIn_1s_ease-in-out_600ms_forwards] text-8xl font-bold">Jacob Sides</h1>
+          <h2 className='text-3xl mt-8  opacity-0 animate-[fadeIn_1s_ease-in-out_1000ms_forwards]'>Creator by ambition & thought</h2>
+          <h2 className={`text-2xl mt-4 pl-0.5 ${mono.className} opacity-0 animate-[fadeIn_1s_ease-in-out_2300ms_forwards]`}>Full-stack Web Developer <br/> by experience & skill</h2>
+        </div>
+      </div>
     </main>
   );
 }
