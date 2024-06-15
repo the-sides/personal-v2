@@ -1,6 +1,18 @@
+'use client'; // hate
+import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
+import { gsap } from "~/lib/gsap";
 import { NavItem } from "./_components/NavItem";
 
+
 export default function Home() {
+  useIsomorphicLayoutEffect(() => {
+    const tween1 = gsap.to('h1', { duration: 3, text: 'Jacob Sides' })
+    const tween2 = gsap.to('.subheading', { delay: 2, duration: 3, text: 'Creator first, Full-stack Dev second' })
+    return () => {
+        tween1.revert();
+        tween2.revert();
+    };
+  }, [])
   return (
     <main className="flex flex-col p-4 pb-0 h-screen bg-zinc-900">
       <div className="flex-shrink-0">
@@ -31,8 +43,8 @@ export default function Home() {
       </div>
       <div className="flex flex-1 z-10 relative -translate-y-5 overflow-hidden">
         <div className="flex-1 h-full pt-12">
-          <h1 className="text-6xl">Jacob Sides</h1>
-          <h2 className="mt-3 text-3xl">Creator first, Full-stack Dev second</h2>
+          <h1 className="text-6xl" aria-label="Jacob Sides"></h1>
+          <h2 className="subheading mt-3 text-3xl" aria-label="Creator first, Full-stack Dev second"></h2>
         </div>
         <div className="side-bar flex flex-col pt-12 w-[200px] border-l border-white pl-4 relative">
           <h2 className="flex-shrink-0 text-3xl top-0 sticky dbg-zinc-900 py-2">Tech / Skills</h2>
