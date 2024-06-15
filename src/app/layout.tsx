@@ -1,9 +1,10 @@
 import '~/css/global.scss'
 
-import { Inter } from 'next/font/google'
+import { Playfair_Display } from 'next/font/google'
 
-const inter = Inter({
-  subsets: ['latin'],
+const font = Playfair_Display({
+  weight: ['400', '700'],
+  subsets: ['latin']
 })
 
 export const metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   )
 }
