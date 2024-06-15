@@ -1,0 +1,22 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "stylelint.validate": ["css", "scss"],
+  "prettier.documentSelectors": [
+    "**/*.astro",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.json"
+  ],
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#550750",
+    "titleBar.activeBackground": "#770A70",
+    "titleBar.activeForeground": "#FFFAFE"
+  }
+}
