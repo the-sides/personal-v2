@@ -11,7 +11,7 @@ const mono = JetBrains_Mono({
 export default function Home() {
 
   return (
-    <main className="flex flex-col h-screen bg-[#F6F5E2] relative">
+    <main className="flex flex-col min-h-screen bg-[#F6F5E2] relative">
       {/* Grid lines */}
       <div className="grow-down absolute left-16 h-full bg-[#2C2C2C] w-px"></div>
       <div className="grow-down animation-delay-1 absolute right-16 h-full bg-[#2C2C2C] w-px"></div>
@@ -48,7 +48,29 @@ export default function Home() {
           <h2 className='text-3xl mt-8  opacity-0 animate-[fadeIn_1s_ease-in-out_1000ms_forwards]'>Creator by ambition & thought</h2>
           <h2 className={`text-2xl mt-4 pl-0.5 ${mono.className} opacity-0 animate-[fadeIn_1s_ease-in-out_2300ms_forwards]`}>Full-stack Web Developer <br /> by experience & skill</h2>
         </div>
-        <Bubbles/>
+        <Bubbles />
+      </section>
+      <section className='dbg-amber-200 w-full h-[1200px] pt-[200px] relative'>
+        <button className="absolute top-[200px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
+          <h2 className="text-[#F6F5E2] pointer-events-none absolute top-7 left-[108px] text-7xl font-bold z-10 origin-left rotate-[10deg] group-hover:rotate-0 transition-transform">Resume</h2>
+          <img src="/section-image-1.png" className="pointer-events-none absolute h-full w-full inset-0 object-cover origin-left rotate-[10deg] group-hover:rotate-0 transition-transform" height={120} alt="" />
+        </button>
+        <button className="absolute top-[320px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
+          <h2 className="text-[#F6F5E2] pointer-events-none absolute top-7 left-[108px] text-7xl font-bold z-10 origin-left rotate-[10deg] group-hover:rotate-0 transition-transform">Portfolio</h2>
+          <img src="/section-image-2.png" className="pointer-events-none absolute h-full w-full inset-0 object-cover origin-left rotate-[10deg] group-hover:rotate-0 transition-transform" height={120} alt="" />
+        </button>
+        <button className="absolute top-[440px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
+          <h2 className="text-[#F6F5E2] pointer-events-none absolute top-7 left-[108px] text-7xl font-bold z-10 origin-left rotate-[10deg] group-hover:rotate-0 transition-transform">Projects</h2>
+          <img src="/section-image-3.png" className="pointer-events-none absolute h-full w-full inset-0 object-cover origin-left rotate-[10deg] group-hover:rotate-0 transition-transform" height={120} alt="" />
+        </button>
+        <button className="absolute top-[560px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
+          <h2 className="text-[#F6F5E2] pointer-events-none absolute top-7 left-[108px] text-7xl font-bold z-10 origin-left rotate-[10deg] group-hover:rotate-0 transition-transform">Filmmaking</h2>
+          <img src="/section-image-4.png" className="pointer-events-none absolute h-full w-full inset-0 object-cover origin-left rotate-[10deg] group-hover:rotate-0 transition-transform" height={120} alt="" />
+        </button>
+        <button className="absolute top-[680px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
+          <h2 className="text-[#F6F5E2] pointer-events-none absolute top-7 left-[108px] text-7xl font-bold z-10 origin-left rotate-[10deg] group-hover:rotate-0 transition-transform">Photography</h2>
+          <img src="/section-image-5.png" className="pointer-events-none absolute h-full w-full inset-0 object-cover origin-left rotate-[10deg] group-hover:rotate-0 transition-transform" height={120} alt="" />
+        </button>
       </section>
     </main>
   );
