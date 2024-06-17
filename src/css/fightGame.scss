@@ -1,0 +1,93 @@
+.arena {
+    display: relative;
+    width: 100%;
+    height: 800px;
+
+    border: 4px dotted theme('colors.amber.900');
+
+    .player {
+        // display: absolute;
+        margin: auto;
+        // margin-top: 64px;
+        width: 200px;
+        height: 200px;
+        background: theme('colors.amber.200');
+
+        .body {
+            // display: absolute;
+            position: relative;
+            margin: auto;
+            margin-top: 1rem;
+            width: 80px;
+            height: 50px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background: theme('colors.amber.300');
+
+            .arm {
+                position: absolute;
+
+                .bicep {
+                    // display: absolute;
+                    // margin-top: 2rem;
+                    width: 20px;
+                    height: 60px;
+                    background: theme('colors.amber.400');
+
+                    &::after {
+                        // Ball at the end of the rectangle
+                        content: '';
+                        position: absolute;
+                        bottom: -1rem;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        z-index: 1;
+                        background: theme('colors.amber.500');
+                    }
+                }
+
+                &.arm-l .bicep {
+                    // margin-left: -20px;
+                    transform: rotate(20deg) translate(-10px, 20px);
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 10px;
+
+                }
+
+                &.arm-r {
+                    right: 0;
+                    // margin-left: auto;
+                }
+
+                &.arm-r .bicep {
+                    // margin-left: -20px;
+                    transform: rotate(-20deg) translate(10px, 20px);
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 20px;
+                }
+
+
+                .forearm {
+                    position: absolute;
+                    top: 1.5rem;
+                    width: 20px;
+                    height: 40px;
+                    background: theme('colors.amber.600');
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    border-top: 10px solid theme('colors.amber.700');
+                    transform-origin: bottom center;
+                    z-index: 1;
+                }
+                &.arm-l .forearm {
+                    transform: rotate(150deg) translate(0, 0px);
+                }
+                &.arm-r .forearm {
+                    transform: rotate(-150deg) translate(0, 0px);
+                }
+            }
+        }
+
+    }
+}
