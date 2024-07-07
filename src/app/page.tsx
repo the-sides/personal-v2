@@ -50,24 +50,24 @@ export default function Home() {
         </div>
         <Bubbles />
       </section>
-      <section className='dbg-amber-200 w-full h-[1200px] pt-[200px] relative'>
+      <section className='w-full h-[max(1200px,50vw)] pt-[200px] relative'>
         <button className="absolute top-[200px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
           <h2 className="text-[#F6F5E2] pointer-events-none absolute top-7 left-[108px] text-7xl font-bold z-10 origin-left rotate-[10deg] group-hover:rotate-0 transition-transform">Resume</h2>
           <img src="/section-image-1.png" className="pointer-events-none absolute h-full w-full inset-0 object-cover origin-left rotate-[10deg] group-hover:rotate-0 transition-transform" height={120} alt="" />
         </button>
-        <button className="absolute top-[320px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
+        <button className="absolute top-[330px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
           <h2 className="text-[#F6F5E2] pointer-events-none absolute top-7 left-[108px] text-7xl font-bold z-10 origin-left rotate-[10deg] group-hover:rotate-0 transition-transform">Portfolio</h2>
           <img src="/section-image-2.png" className="pointer-events-none absolute h-full w-full inset-0 object-cover origin-left rotate-[10deg] group-hover:rotate-0 transition-transform" height={120} alt="" />
         </button>
-        <button className="absolute top-[440px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
+        <button className="absolute top-[460px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
           <h2 className="text-[#F6F5E2] pointer-events-none absolute top-7 left-[108px] text-7xl font-bold z-10 origin-left rotate-[10deg] group-hover:rotate-0 transition-transform">Projects</h2>
           <img src="/section-image-3.png" className="pointer-events-none absolute h-full w-full inset-0 object-cover origin-left rotate-[10deg] group-hover:rotate-0 transition-transform" height={120} alt="" />
         </button>
-        <button className="absolute top-[560px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
+        <button className="absolute top-[590px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
           <h2 className="text-[#F6F5E2] pointer-events-none absolute top-7 left-[108px] text-7xl font-bold z-10 origin-left rotate-[10deg] group-hover:rotate-0 transition-transform">Filmmaking</h2>
           <img src="/section-image-4.png" className="pointer-events-none absolute h-full w-full inset-0 object-cover origin-left rotate-[10deg] group-hover:rotate-0 transition-transform" height={120} alt="" />
         </button>
-        <button className="absolute top-[680px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
+        <button className="absolute top-[720px] h-[120px] w-[calc(100%+100px)] left-[-50px] group">
           <h2 className="text-[#F6F5E2] pointer-events-none absolute top-7 left-[108px] text-7xl font-bold z-10 origin-left rotate-[10deg] group-hover:rotate-0 transition-transform">Photography</h2>
           <img src="/section-image-5.png" className="pointer-events-none absolute h-full w-full inset-0 object-cover origin-left rotate-[10deg] group-hover:rotate-0 transition-transform" height={120} alt="" />
         </button>
