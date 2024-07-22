@@ -3,7 +3,7 @@
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useIsomorphicLayoutEffect } from "~/hooks/use-isomorphic-layout-effect";
 import { gsap } from "~/lib/gsap";
 
@@ -18,7 +18,7 @@ export default function WorkItem({img, video, title, dir = 'left'}: Props) {
     const imgElm = useRef(null)
     const contentElm = useRef(null)
     const dirVal = dir === 'right' ? -1 : 1
-    useEffect(() => {
+    useIsomorphicLayoutEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         if(!imgElm.current || !contentElm.current) return
 
