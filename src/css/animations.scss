@@ -38,3 +38,18 @@
     opacity: 1;
   }
 }
+
+
+
+.marquee-left {
+  animation: marquee-left 120s linear infinite;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
