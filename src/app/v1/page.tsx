@@ -2,6 +2,7 @@
 import useIsomorphicLayoutEffect from "use-isomorphic-layout-effect";
 import { gsap } from "~/lib/gsap";
 import { NavItem } from "~/app/v1/_components/NavItem";
+// import LineMotion from "~/app/_components/LineMotion";
 
 
 export default function Home() {
@@ -28,7 +29,7 @@ export default function Home() {
             </div>
             <div className="fade pointer-events-none bg-gradient-to-l from-zinc-900 to-transparent absolute h-full w-[200px] right-0 inset-y-0 ml-auto"></div>
           </div>
-          <div className="flex-1 w-1/2 h-full px-8">
+          <div className="flex-1 w-1/2 h-full px-8 relative">
             <h2 className="text-3xl">Personal</h2>
             <div className="flex overflow-x-auto p-2 pb-8 pr-24">
               <NavItem title="Portfolio" description="Lorem ispum su epium de criatus lorem ispum su epium de criatus lorem ispum su epium de criatus" />
@@ -42,9 +43,11 @@ export default function Home() {
         </div>
       </div>
       <div className="flex flex-1 z-10 relative -translate-y-5 overflow-hidden">
-        <div className="flex-1 h-full pt-12">
+        <div className="flex-1 h-full pt-12 relative overflow-hidden">
           <h1 className="text-6xl" aria-label="Jacob Sides"></h1>
           <h2 className="subheading mt-3 text-3xl" aria-label="Creator first, Full-stack Dev second"></h2>
+          
+          {/* <LineMotion/> */}
         </div>
         <div className="side-bar flex flex-col pt-12 w-[200px] border-l border-white pl-4 relative">
           <h2 className="flex-shrink-0 text-3xl top-0 sticky dbg-zinc-900 py-2">Tech / Skills</h2>
