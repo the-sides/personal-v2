@@ -7,7 +7,7 @@ import { useRef, useState } from 'react';
 import { useIsomorphicLayoutEffect } from '~/hooks/use-isomorphic-layout-effect';
 import WorkItem from './_components/WorkItem';
 import mergerAiImg from '~/public/mergerai-planner.png'
- import empowerImg from '~/public/empower-home.png'
+import empowerImg from '~/public/empower-home.png'
 import Lenis from 'lenis'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -25,14 +25,14 @@ export default function Home() {
   useIsomorphicLayoutEffect(() => {
     if (!headerRoot.current || headerRoot.current.children.length < 3) return;
     const lenis = new Lenis()
-  
+
     const header = headerRoot.current.children[0] as HTMLElement;;
     const subheader = headerRoot.current.children[1] as HTMLElement;;
     const devheader = headerRoot.current.children[2] as HTMLElement;;
 
     lenis.on('scroll', ScrollTrigger.update)
     lenis.on('scroll', (e: any) => {
-      if(e.targetScroll !== 0) {
+      if (e.targetScroll !== 0) {
         setAtTop(false)
       } else {
         setAtTop(true)
@@ -86,10 +86,10 @@ export default function Home() {
       </svg>
 
       <section className="flex gap-x-4 text-[#2C2C2C] w-full justify-end">
-        <header ref={headerRoot} className=" py-[148px] px-[110px] ">
-          <h1 className="block  text-8xl font-bold min-h-[96px]"></h1>
-          <h2 className='subheading text-3xl mt-8 min-h-9'></h2>
-          <h2 className={`devheading text-2xl mt-4 pl-0.5 min-h-8 ${mono.className} `}></h2>
+        <header ref={headerRoot} className="w-[920px] py-[148px] px-[110px] ">
+          <h1 className="block  text-8xl font-bold min-h-[96px]"> </h1>
+          <h2 className='subheading text-3xl mt-8 min-h-9'> </h2>
+          <h2 className={`devheading text-2xl mt-4 pl-0.5 min-h-8 ${mono.className} `}> </h2>
         </header>
       </section>
       <section className="w-full mt-12 ">
