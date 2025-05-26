@@ -7,6 +7,7 @@ import { useRef, useState } from 'react';
 import { useIsomorphicLayoutEffect } from '~/hooks/use-isomorphic-layout-effect';
 import WorkItem from './_components/WorkItem';
 import mergerAiImg from '~/public/mergerai-planner.png'
+ import empowerImg from '~/public/empower-home.png'
 import Lenis from 'lenis'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -97,7 +98,7 @@ export default function Home() {
         </div>
         <WorkItem img={mergerAiImg} url='' title='MergerAI' />
         <WorkItem video={'/hagler-home.mp4'} url='' title='Hagler Process' dir='right' />
-        <WorkItem img={mergerAiImg} url='' title='MergerAI' />
+        <WorkItem img={empowerImg} url='' title='Empower-U-Consulting' />
       </section>
     </main>
   );
