@@ -7,9 +7,11 @@ import { useRef, useState } from 'react';
 import { useIsomorphicLayoutEffect } from '~/hooks/use-isomorphic-layout-effect';
 import WorkItem from './_components/WorkItem';
 import mergerAiImg from '~/public/mergerai-planner.png'
+import me from '~/public/blue-jacob.png'
 import empowerImg from '~/public/empower-home.png'
 import Lenis from 'lenis'
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
 
 const mono = JetBrains_Mono({
   weight: ['400'],
@@ -49,6 +51,8 @@ export default function Home() {
       .to(subheader, { duration: 1, text: 'Creator by ambition & thought' })
       .to(devheader, { duration: 1, delay: 0.5, text: 'Full-stack Web Developer by experience & skill' });
 
+    gsap.to('.me-img', { delay: 0.5, x: 0, y: 0, opacity: 1 })
+
     return () => { tl.revert(); };
   }, [])
 
@@ -86,6 +90,13 @@ export default function Home() {
       </svg>
 
       <section className="flex gap-x-4 text-[#2C2C2C] w-full justify-end">
+        <div className="w-[30%] my-[148px] after:content-[''] after:z-0 after:absolute after:inset-0 overflow-visible after:size-[calc(100%+24px)] after:bg-black after:bg-opacity relative">
+          <Image alt='Me, Jacob Sides' src={me} className="me-img z-20 relative opacity-0 translate-x-6 translate-y-6" />
+          <div className="absolute -top-8 right-[-60px] bg-[#F6F5E2] size-12 z-10"></div>
+          <div className="absolute bottom-[-60px] -left-8 bg-[#F6F5E2] size-12 z-10"></div>
+          <div className="absolute -bottom-6 -right-6  border-2 border-black bg-[#F6F5E2] size-12 z-10"></div>
+          <div className="absolute -top-6 -left-6 border-2 border-black bg-[#F6F5E2] size-12 z-30"></div>
+        </div>
         <header ref={headerRoot} className="w-[920px] py-[148px] px-[110px] ">
           <h1 className="block  text-8xl font-bold min-h-[96px]"> </h1>
           <h2 className='subheading text-3xl mt-8 min-h-9'> </h2>
